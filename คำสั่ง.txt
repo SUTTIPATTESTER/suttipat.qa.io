@@ -1,0 +1,11 @@
+adb shell dumpsys activity a . | grep -E 'mResumedActivity' | cut -d ' ' -f 8
+
+adb shell dumpsys activity a . | findstr -E 'mResumedActivity' | cut -d ' ' -f 8
+adb shell dumpsys activity | grep "mResumedActivity" | cut -d ' ' -f 8
+
+adb shell dumpsys window | findstr -E 'mCurrent'
+
+
+ใช้อันนี้  adb shell dumpsys window | find "mCurrentFocus"
+
+mCurrentFocus=Window{b84445c u0 com.android.settings/com.android.settings.Settings}
